@@ -105,11 +105,11 @@ class Candidate extends Component {
   render() {
     return (
       <button
-        className={`focus:outline-none flex-1 text-white py-2 px-3 mx-1 text-sm md:h-12 h-16 rounded bg-${this.props.color}-dark hover:bg-${this.props.color}-darker`}
+        className={`focus:outline-none flex-1 text-white pt-4 pb-3 px-3 mx-1 text-xs md:text-lg rounded bg-${this.props.color}-dark hover:bg-${this.props.color}-darker`}
         onClick={() =>
           this.handleSubmit(this.props)
         }>
-        {this.props.name}: <b>{this.props.votes}</b>
+        <b>{this.props.name}</b> <p class="py-1"><b>{this.props.votes}</b></p>
       </button>
     );
   }
